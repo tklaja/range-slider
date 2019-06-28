@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Range Slider Demo</title>
+    <link rel="stylesheet" href="range-slider.min.css">
+    <script src="range-slider.min.js"></script>
+    <style>
+      .separator {clear:both; border: 1px solid #dedede; width: 80 %;}
+      .range-slider { padding-top: 30px;}
+    </style>
+  </head>
+  <body>
+    <h1>Range Slider Demo</h1>
+    <h2>Slider with default values</h2>
+    <code>&lt;div class="range-slider"&gt;&lt;/div&gt;</code><br>
+    <div class="range-slider"></div>
+    <hr class="separator">
+    <h2>Slider with params max, min, start, end</h2>
+    <code>&lt;div  class="range-slider" data-min="0" data-max="50" data-start="30" data-end="44"&gt;&lt;/div&gt;</code><br>
+    <div class="range-slider" data-min="0" data-max="50" data-start="30" data-end="44"></div>
+    <hr class="separator">
+    <h2>Slider with class "round"</h2>
+    <code>&lt;div class="range-slider round" data-min="10" data-max="300" data-start="30" data-end="160"&gt;&lt;/div&gt;</code><br>
+    <div class="range-slider round" data-min="10" data-max="300" data-start="30" data-end="160"></div>
+    <hr class="separator">
+    <h2>Slider with class "round" and custom id</h2>
+    <code>&lt;div id="my-slider" class="range-slider round"&gt;&lt;/div&gt;</code><br>
+    <div id="my-slider" class="range-slider round"></div>
+    <blockquote>when range slider element has no id, script generates it using pattern rs-slider-num where num is incremental number. When id is supplied it uses given id.</blockquote>
+    <hr class="separator">
+
+    <script>
+      CreateRangeSliders();
+    </script>
+  </body>
+</html>

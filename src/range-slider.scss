@@ -1,0 +1,69 @@
+.range-slider { //cały obiekt slidera
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 450px;
+  padding-bottom: 30px;
+
+  div {
+    box-sizing: border-box;
+  }
+
+  .range-slider-display { //obszar z suwakami
+    position: relative;
+    height: 15px;
+    width: 100%;
+    background: #d6d6d6;
+    /* border: 1px solid #999; */
+
+    .range-slider-display-range { //pasek kolorowy pomiędzy suwakami
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      /* transform: translateY(-50%); */
+      background: #5393c5;
+      /* border: 1px solid #bcbcbc; */
+      border-radius: 7px;
+    }
+    .slider { //pojedyńczy suwak
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      background: #fff;
+      border: 1px solid #d6d6d6;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 101;
+      &:active { //suwak kliknięty
+        background: #eee;
+      }
+      &.slider1 { //suwak lewy
+        left: -1px;
+      }
+      &.slider2 { //suwak prawy
+        right: -1px;
+      }
+      .value { //pole tekstowe z wartością pod suwakiem
+        position: absolute;
+        border: none;
+        background: none;
+        width: 40px;
+        text-align: center;
+        font-size: 12px;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &.round {
+    .range-slider-display {
+      border-radius: 7px;
+    }
+    .slider {
+      border-radius: 50%;
+    }
+
+  }
+}
